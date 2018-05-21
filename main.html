@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <header>
+    <header id='top'>
         <div id="menu-small" class="menu pos-f-t">
             <nav class="navbar single-column">
                 <button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dropdown" aria-controls="navbarToggleExternalContent"
@@ -34,10 +34,11 @@
                     <i class="fa fa-bars fa-2x"></i>
                 </button>
                 <div class="collapse" id="dropdown">
-                    <div class="">
+                    <div class="menu-container">
+                        <a href="#top" class='highlighted'><h4>Top</h4></a>
                         <a href="#about"><h4>About</h4></a>
                         <a href="#portfolio"><h4>Portfolio</h4></a>
-                        <a href="#resume"><h4>Resumé</h4></a>
+                        <a href="#testimonials"><h4>Testimonials</h4></a>
                         <a href="#contact"><h4>Contact</h4></a>
                     </div>
                 </div>
@@ -45,9 +46,10 @@
         </div>
         <nav id="menu-big" class="menu">
             <div id="menu-container">
+                <a href="#top" class='highlighted'><h3>Top</h3></a>
                 <a href="#about"><h3>About</h3></a>
                 <a href="#portfolio"><h3>Portfolio</h3></a>
-                <a href="#resume"><h3>Resumé</h3></a>
+                <a href="#testimonials"><h3>Testimonials</h3></a>
                 <a href="#contact"><h3>Contact</h3></a>
             </div>
         </nav>
@@ -63,16 +65,29 @@
             <div class="column-container">
                 <div>
                     <h3>About</h3>
-                    <article>
-                        <h5>An Inquiring Mind</h5>
-                        <h6>Early Life and Biochemistry</h6>
-                        <p>Max was born in Souther Califorina to a chemist and an painter. He graduated from the University of California, Davis with a Bachelors of Science in Molecular and Cellular Biology, with an emphasis in Biochemistry.</p>
-                    </article>
-                    <article>
-                        <h5>Mustache Etiquette</h5>
-                        <h6>City Life and Leisure</h6>
-                        <p>After a brief stint doing crop science in Woodland, Max moved to San Francisco in 2011 and </p>
-                    </article>
+                    <div class="column-container">
+                        <article>
+                            <h5>An Inquiring Mind</h5>
+                            <h6>Early Life and Biochemistry</h6>
+                            <ul>
+                                <li>Graduated from University of California, Davis</li>
+                                <li>Bachelors of Science in Molecular and Cellular Biology, with an emphasis in Biochemistry</li>
+                                <li>Six years experience working for the Public Library of Science</li>
+                                <li>Soft skills</li>
+                                <li>Statistica analysis using excel</li>
+                                <li>User-side software testing</li>
+                            </ul>
+                        </article>
+                        <article>
+                            <h5>General Assembly</h5>
+                            <h6>Web Development Intensive</h6>
+                            <ul>
+                                <li>HTML, CSS and Vanilla Javascript</li>
+                                <li>Bootstrap, JQuery, React</li>
+                                <li>Python and Django</li>
+                            </ul>
+                        </article>
+                    </div>
                 </div>
                 <aside>
                     <img src="images/tuolumne.jpg" alt="Max tidepooling" />
@@ -108,48 +123,56 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+            <a href="#testimonials"><i class="fa fa-chevron-down fa-2x"></i></a>
         </section>
-        <section id='resume' class="column-container invert">
+        <section id='testimonials' class="single-column invert">
+            <h3>Testimonials</h3>
             <article>
-                <h5>General Assembly</h5>
-                <h6>Web Development Intensive aka "Bootcamp"</h6>
-                <p>Pabst taxidermy woke typewriter, tbh raclette viral try-hard +1 brooklyn mlkshk salvia prism. Shoreditch offal banh mi tattooed
-                typewriter austin tumeric drinking vinegar roof party four dollar toast food truck. Knausgaard vegan viral next level. Cardigan
-                poutine tofu yuccie authentic, migas godard lumbersexual stumptown forage iPhone glossier vinyl. Mustache everyday carry
-                biodiesel subway tile.</p>
-                <a href="#">Investigate</a>
+                <p>"Max is a delight to behold and a credit to his nation."</p>
+                <h6>&mdash; Jane from Occupied Europe</h6>
             </article>
-            <article>
-                <h5>Public Library of Science</h5>
-                <h6>Soft Skills and User-Side Software Testing</h6>
-                <p>Chillwave lumbersexual flannel austin, ennui hammock squid semiotics thundercats. Literally put a bird on it gochujang, before
-                they sold out gastropub poke quinoa portland art party. Fashion axe echo park PBR&B, cardigan brooklyn food truck affogato
-                quinoa. Umami hashtag hell of art party paleo tousled. Dreamcatcher tumblr health goth, tote bag put a bird on it messenger
-                bag marfa mlkshk leggings synth tacos listicle direct trade lomo. Distillery sustainable yr before they sold out 90's. Beard
-                pug umami raclette lumbersexual distillery.</p>
-                <a href="#">Investigate</a>
-            </article>
+            <a href="#contact"><i class="fa fa-chevron-down fa-2x"></i></a>
         </section>
-        <section id="contact">
-            <h2>Say hi</h2>
+        <section id="contact" class="single-column">
+            <h3>Contact Me</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <input type="text" class="form-control form-control-lg text" name="name" placeholder="John Deere">
+                        </div>
+                        <div class="row">
+                            <input type="text" class="form-control form-control-lg text" name="email" placeholder="jdeere@gmail.com">
+                        </div>
+                        <div class="row">
+                            <input type="text" class="form-control form-control-lg text" name="subject" placeholder="Subject">
+                        </div>
+                    </div>
+                    <div class="column col-md-6">
+                        <input type="textarea" class="form-control textarea" rows="30" name="name" placeholder="Write here">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column col-md-12">
+                        <input type="submit" class="form-control form-control-lg button">
+                    </div>
+                </div>
+            </div>
+            <h3></h3>
         </section>
     </main>
     <footer>
         <nav>
             <a href="https://github.com/maxvidrine">
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github 5x"></i>
             </a>
             <a href="https://twitter.com/maxvidrine">
-                <i class="fab fa-twitter"></i>
+                <i class="fab fa-twitter 5x"></i>
             </a>
             <a href="mailto:max.vidrine@gmail.com?subject=I%20saw%20your%20website">
-                <i class="fab fa-envelope"></i>
+                <i class="fas fa-envelope 5x"></i>
             </a>
         </nav>
-        <form>
-            <input type="text" name="email" placeholder="Email Address">
-            <input type="submit" value="Keep in Touch">
-        </form>
         <p>&copy;2018 Max Vidrine</p>
     </footer>
 </body>
